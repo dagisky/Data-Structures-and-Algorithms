@@ -1,42 +1,26 @@
-# Algorithms
-## Bubble Sort
-Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
-### Example
-Given an array of  x = ( 5, 1, 4, 2, 8 )
-#### First Pass
-- ( **5**, **1**, 4, 2, 8, ) –> ( **1**, **5**, 4, 2, 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
-- ( 1, **5**, **4**, 2, 8 ) –>  ( 1, **4**, **5**, 2, 8 ), Swap since 5 > 4
-- ( 1, 4, **5**, **2**, 8 ) –>  ( 1, 4, **2**, **5**, 8 ), Swap since 5 > 2
-- ( 1, 4, 2, **5**, **8** ) –> ( 1, 4, 2, **5**, **8** ), Now, since these elements are already in order (8 > 5), algorithm does not swap them
+# Data Structures and Algorithms
 
-#### Second Pass:
-- ( **1**, **4**, 2, 5, 8 ) –> ( **1**, **4**, 2, 5, 8 )
-- ( 1, **4**, **2**, 5, 8 ) –> ( 1, **2**, **4**, 5, 8 ), Swap since 4 > 2
-- ( 1, 2, **4**, **5**, 8 ) –> ( 1, 2, **4**, **5**, 8 )
-- ( 1, 2, 4, **5**, **8** ) –>  ( 1, 2, 4, **5**, **8** )
+These codes cover the key ideas involved in designing algorithms. We shall see how some structures and algorithms are more efficient than others for the same task. We will concentrate on a few basic tasks, such as storing, sorting, and searching data, that are fundamentals of computer science. All codes are implemented in both Java and Python.
 
-Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted. Thus the algorithm will go on to the third pass
+## Installation
+Unless stated in the readme of the given section, the rest of the code snippets only need basic installation of Python and Java.
+* [Python](https://www.python.org/downloads/)
+* [Java]()
 
-## Python Code Sample
+## Table of Contents 
+* [Sorting](Sorting)
+	* Selection Sort
+	* Insertion Sort
+	* Bubble Sort
+	* Merge Sort
+* [Multiplication](Multiplication)
+	* Naive
+	* Devide and Conquer (karatsuba)
+* [Computational Geometry](Computational-Geometry)
+	* Closest Pair
 
-```sh
-def bubble_sort(num_list):
-	n = len(num_list)
-	# Traverse through all array elements
-	for i in range(n):
-		# The last elements are already in place
-		for j in range(0, n-i-1):
-			# Traverse the array from 0 to n-i-1
-			# Swap if the element is found greater than the 
-			# next element
-			if num_list[j] > num_list[j+1]:
-				num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
-	return num_list
-```
 
-Java Code is also provided.
-
-License
+## License
 ----
 
 None
