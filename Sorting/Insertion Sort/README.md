@@ -1,42 +1,34 @@
 # Algorithms
-## Bubble Sort
-Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+## Insertion Sort
+Insertion sort is a simple sorting algorithm that allows in-place sorting of the array, one element at a time. In-place sorting means the original array is modified.
+
 ### Example
-Given an array of  x = ( 5, 1, 4, 2, 8 )
+Given an array of  x = ( 6,5,3,1,8,7,2,4 )
 #### First Pass
-- ( **5**, **1**, 4, 2, 8, ) –> ( **1**, **5**, 4, 2, 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
-- ( 1, **5**, **4**, 2, 8 ) –>  ( 1, **4**, **5**, 2, 8 ), Swap since 5 > 4
-- ( 1, 4, **5**, **2**, 8 ) –>  ( 1, 4, **2**, **5**, 8 ), Swap since 5 > 2
-- ( 1, 4, 2, **5**, **8** ) –> ( 1, 4, 2, **5**, **8** ), Now, since these elements are already in order (8 > 5), algorithm does not swap them
+- (**6**,**5**,3,1,8,7,2,4) –> (5, **6**,3,1,8,7,2,4), Here, algorithm compares the first two elements, and swaps since 6 > 5.
+- (**5**, **6**,3,1,8,7,2,4) –>  (3,**5**, **6**,1,8,7,2,4), place 3 first since both 5 & 6 > 3
 
-#### Second Pass:
-- ( **1**, **4**, 2, 5, 8 ) –> ( **1**, **4**, 2, 5, 8 )
-- ( 1, **4**, **2**, 5, 8 ) –> ( 1, **2**, **4**, 5, 8 ), Swap since 4 > 2
-- ( 1, 2, **4**, **5**, 8 ) –> ( 1, 2, **4**, **5**, 8 )
-- ( 1, 2, 4, **5**, **8** ) –>  ( 1, 2, 4, **5**, **8** )
+![Insertion Sort](https://en.wikipedia.org/wiki/File:Insertion-sort-example-300px.gif)
 
-Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted. Thus the algorithm will go on to the third pass
 
 ## Python Code Sample
 
 ```sh
-def bubble_sort(num_list):
-	n = len(num_list)
-	# Traverse through all array elements
-	for i in range(n):
-		# The last elements are already in place
-		for j in range(0, n-i-1):
-			# Traverse the array from 0 to n-i-1
-			# Swap if the element is found greater than the 
-			# next element
-			if num_list[j] > num_list[j+1]:
-				num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
+def insertion_sort(num_list):
+	num_list = list(num_list)
+	for i in range(1,len(num_list)):
+		j = i
+		while j>0 and num_list[j] < num_list[j-1]:
+			temp = num_list[j]
+			num_list[j] = num_list[j-1]
+			num_list[j-1] = temp
+			j -= 1
 	return num_list
 ```
 
 Java Code is also provided.
 
-License
+License & Acknowledgement
 ----
 
-None
+Image provided by [wiki](https://en.wikipedia.org/wiki/Insertion_sort)
