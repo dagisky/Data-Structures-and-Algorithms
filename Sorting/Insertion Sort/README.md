@@ -8,7 +8,7 @@ Given an array of  x = ( 6,5,3,1,8,7,2,4 )
 - (**6**,**5**,3,1,8,7,2,4) –> (5, **6**,3,1,8,7,2,4), Here, algorithm compares the first two elements, and swaps since 6 > 5.
 - (**5**, **6**,3,1,8,7,2,4) –>  (3,**5**, **6**,1,8,7,2,4), place 3 first since both 5 & 6 > 3
 
-![Insertion Sort](https://en.wikipedia.org/wiki/File:Insertion-sort-example-300px.gif)
+![Insertion Sort](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
 
 
 ## Python Code Sample
