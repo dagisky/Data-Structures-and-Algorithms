@@ -17,21 +17,20 @@ Given an array of  x = ( 5, 1, 4, 2, 8 )
 
 Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted. Thus the algorithm will go on to the third pass
 
-## Python Code Sample
+## Pseudo-code
 
 ```sh
-def bubble_sort(num_list):
-	n = len(num_list)
-	# Traverse through all array elements
-	for i in range(n):
-		# The last elements are already in place
-		for j in range(0, n-i-1):
-			# Traverse the array from 0 to n-i-1
-			# Swap if the element is found greater than the 
-			# next element
-			if num_list[j] > num_list[j+1]:
-				num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
-	return num_list
+# Given an array A of n Numbers
+for j = 2 to n {
+	key = A[j]
+	i = j - 1
+	# A[j] is added in the sorted sequence A[1... j-1]
+	while((i> = 0) and (A[i] > key)){
+		A[i+1] = A[i]
+		i = i-1
+	}
+	A[i] =  key
+}
 ```
 
 Java Code is also provided.
